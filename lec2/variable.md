@@ -1,6 +1,6 @@
 ### java里有八个基本类型：
   byte, short, int, long, float, double, boolean, char
-我们在声明变量时，电脑在内存里给了我们对应的bits来存储value, 而name代表value的地址
+我们在声明变量时，电脑在内存里给了我们对应的几位bits来存储初始化的value, 而name代表value的地址
 当变量没有被赋值，即变量没有指向某一地址，它不可被访问！
 
 Example:
