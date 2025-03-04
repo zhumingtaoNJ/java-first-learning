@@ -35,6 +35,6 @@ Ex:
 ```
 int x ->box(value)
 
-dog y ->box(address)->value
+dog y ->box(address)->box(value)
 ```
 
