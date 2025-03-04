@@ -5,10 +5,12 @@
 Example:
 ```java  
     int x; 
-    x = -1431195969;```
+    x = -1431195969;
+```
     ![image](https://github.com/user-attachments/assets/5d5c70ef-2eca-4dff-abd5-26f1b4c6e8b8)
     ![image](https://github.com/user-attachments/assets/83067360-5dbf-4b50-86d4-704b2b5a8af6)
 ## 位复制
 ```java int y; 
-        y = x; ```
+        y = x;
+```
 实际上是把x指向的地址里的内容复制给y指向的地址，两者内存地址不一样，改变一方对另一方没什么影响。
