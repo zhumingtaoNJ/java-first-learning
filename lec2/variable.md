@@ -38,3 +38,17 @@ int x ->box(value)
 dog y ->box(address)->box(value)
 ```
 
+### Arrays
+
+数组也是一种引用变量
+
+```
+int[] x = new int []{1, 2, 3,  4, 5};
+
+x->box(address)->box(values of array)
+```
+
+### links
+
+## Intlink
+
