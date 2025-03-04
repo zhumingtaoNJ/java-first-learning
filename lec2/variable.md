@@ -32,7 +32,9 @@ Example:
 
 Ex:
 
+```
 int x ->box(value)
 
 dog y ->box(address)->value
+```
 
