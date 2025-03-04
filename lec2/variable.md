@@ -13,7 +13,8 @@ Example:
     ![image](https://github.com/user-attachments/assets/83067360-5dbf-4b50-86d4-704b2b5a8af6)
 ## 位复制
 
-```java int y; 
+```java
+        int y; 
         y = x;
 ```
 
