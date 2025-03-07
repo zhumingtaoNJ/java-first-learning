@@ -60,12 +60,12 @@ public class Intlist {
   public Intlist rest;
 
 /**return the size of a Intlist from this node */
-public int size() {
-  if (rest == null) {
-    return 1;
+  public int size() {
+    if (rest == null) {
+      return 1;
+    }
+    return 1 + this.rest.size();
   }
-  return 1 + this.rest.size();
-}
 
 /**initialize an Intlist Node*/
   public Intlist (int f, Intlist r) {
