@@ -59,6 +59,15 @@ public class Intlist {
   public int first;
   public Intlist rest;
 
+/**return the size of a Intlist from this node */
+public int size() {
+  if (rest == null) {
+    return 1;
+  }
+  return 1 + this.rest.size();
+}
+
+/**initialize an Intlist Node*/
   public Intlist (int f, Intlist r) {
     first = f;
     rest = r;
