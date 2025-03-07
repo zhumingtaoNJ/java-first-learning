@@ -59,14 +59,6 @@ public class Intlist {
   public int first;
   public Intlist rest;
 
-/**return the size of a Intlist from this node */
-  public int size() {
-    if (rest == null) {
-      return 1;
-    }
-    return 1 + this.rest.size();
-  }
-
 /**initialize an Intlist Node*/
   public Intlist (int f, Intlist r) {
     first = f;
@@ -79,5 +71,24 @@ public class Intlist {
     L = new Intlist(5, L);
   }
 }
+```
+
+后面我们继续添加一些功能如get,size
+```java
+/**return the size of a Intlist from this node */
+  public int size() {
+    if (rest == null) {
+      return 1;
+    }
+    return 1 + this.rest.size();
+  }
+
+/**return the ith item in an Intlist */
+    public int get(int i) {
+        if (i == 0) {
+            return first;
+        }
+        return rest.get(i - 1);
+    }
 ```
 
