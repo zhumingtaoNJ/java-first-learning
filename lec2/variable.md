@@ -43,7 +43,7 @@ dog y ->box(address)->box(value)
 数组也是一种引用变量
 
 ```
-int[] x = new int []{1, 2, 3,  4, 5};
+int[] x = new int []{1, 2, 3, 4, 5};
 
 x->box(address)->box(values of array)
 ```
@@ -51,4 +51,24 @@ x->box(address)->box(values of array)
 ### links
 
 ## Intlink
+
+相比数组，链表可变长度，以下是一个只记录数字的简单链表
+
+""" 
+public class Intlist {
+  public int first;
+  public Intlist rest;
+
+  public Intlist (int f, Intlist r) {
+    first = f;
+    rest = r;
+    }
+
+  public static void main(String[] args) {
+    Intlist L = new Intlist(15, null);
+    L = new Intlist(10, L);
+    L = new Intlist(5, L);
+  }
+}
+"""
 
