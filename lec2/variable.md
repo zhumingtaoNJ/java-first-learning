@@ -54,7 +54,7 @@ x->box(address)->box(values of array)
 
 相比数组，链表可变长度，以下是一个只记录数字的简单链表
 
-""" 
+```
 public class Intlist {
   public int first;
   public Intlist rest;
@@ -70,5 +70,5 @@ public class Intlist {
     L = new Intlist(5, L);
   }
 }
-"""
+```
 
