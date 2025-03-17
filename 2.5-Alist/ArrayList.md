@@ -29,3 +29,22 @@
   适时调整items.length来优化内存使用
 
   如当R = size / items.length < 0.25时，将items.length减半
+
+## 泛型AList
+java不允许泛型数组的直接创建
+
+错误如下：
+```java
+Item[] object = new Item[size];
+```
+
+正确的语法如下
+
+```java
+Item[] object = (Item[]) new Object[size];
+```
+## 泛型数组删除最后的引用
+泛型数组删除后应该释放引用来节省内存因为指向的元素可能占巨大的内存。
+```java
+items[size - 1] = null;
+```
