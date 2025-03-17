@@ -33,7 +33,6 @@ public class AList {
     /** Deletes item from back of the list and
       * returns deleted item. */
     public int removeLast() {
-        items[size - 1] = 0;
         size -= 1;
     }
 } 
