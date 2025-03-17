@@ -25,4 +25,7 @@
   items[size] = x;
   size *= 2;
   ```
+## Memory Performance
+  适时调整items.length来优化内存使用
 
+  如当R = size / items.length < 0.25时，将items.length减半
