@@ -12,17 +12,25 @@ public class AList {
 
     /** Inserts X into the back of the list. */
     public void addLast(int x) {
+        if (size == items.length) {
+            int[] a = new int[size + 1];
+            System.arraycopy(items, 0, a, 0, size);
+            a[size] = x;
+            size += 1;
+            items = a;
+            return;
+        }
         items[size] = x;
         size += 1;
     }
 
     /** Returns the item from the back of the list. */
     public int getLast() {
-        return item[size - 1];
+        return items[size - 1];
     }
     /** Gets the ith item in the list (0 is the front). */
     public int get(int i) {
-        return item[i];
+        return items[i];
     }
 
     /** Returns the number of items in the list. */
