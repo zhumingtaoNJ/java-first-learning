@@ -10,18 +10,21 @@ public class AList {
         items = new int[100];
     }
 
-    /** Inserts X into the back of the list. */
+    /**resize the size of items */
+    private void resize(int capacity) {
+        int[] a = new int[size + 1];
+        System.arraycopy(items, 0, a, 0, size);
+        items = a;
+    }
+    /** Inserts X into the back of the list. 
+     *  if size == items.length, create new items to replace items
+     * */
     public void addLast(int x) {
         if (size == items.length) {
-            int[] a = new int[size + 1];
-            System.arraycopy(items, 0, a, 0, size);
-            a[size] = x;
-            size += 1;
-            items = a;
-            return;
+            resize(size * 2);
         }
         items[size] = x;
-        size += 1;
+        size *= 2;
     }
 
     /** Returns the item from the back of the list. */
