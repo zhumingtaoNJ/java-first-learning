@@ -1,6 +1,6 @@
 # Test
 
-## 编写程序之前先写测试
+## ！！！编写程序之前先写测试！！！
 
 对于Sort.sort这个method，我们写TestSort.testSort这个method来测试。
 
@@ -90,4 +90,49 @@ public class TestSort {
 实现比较简单在此略过
 
 ## Sort
+只需要把两个辅助模块拼接起来
+
+但是似乎findSmallest没有给出smallest item的index，修改一下
+
+别忘了修改testFindSmallest!!!
+```java
+/** test the findSmallest*/
+public static void testFindSmallest() {
+    String[] input = {"i", "have", "an", "egg"};
+    int expected = 2;
+
+    int actual = Sort.findSmallest(input);
+    org.junit.Assert.assertEquals(expected, actual);        
+}
+/** return the index of the smallest items */
+public static int findSmallest(String[] x) {
+    int smallestIndex = 0;
+    for (int i = 0; i < x.length; i += 1) {
+        int cmp = x[i].compareTo(x[smallestIndex]);
+        if (cmp < 0) {
+            smallestIndex = i;
+        }
+    }
+    return smallestIndex;
+}
+```
+接着尝试用递归解决最后一步
+
+in python
+```python
+sort(x[1:])
+```
+但是in java这不可能，但我们可以构建一个辅助函数ssort(String[] x, int start)
+```java
+public static void sort(String[] s ){
+    sort(s, 0);
+}
+
+private static vois sort(Stirng[] s, int start) {
+    int smallestIndex = findSmallest(s);
+    swap(s, start, smallestIndes);
+    sort(s, start + 1);
+}
+```
+对本质上不是递归的数据结构（例如数组）使用递归时，这种方法非常常见。
     
