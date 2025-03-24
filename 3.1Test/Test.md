@@ -135,4 +135,12 @@ private static vois sort(Stirng[] s, int start) {
 }
 ```
 对本质上不是递归的数据结构（例如数组）使用递归时，这种方法非常常见。
+
+测试发现问题
+1. sort没有终止条件
+   添加if (start == s.length) { return };
+2. findsmallest()会一直返回一个值
+   改变为findsmallest(String[] s, int start);
+
+## 测试的好处在于可以针对某个方法而不是整个程序测试，从而精细地找出bug
     
