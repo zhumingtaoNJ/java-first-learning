@@ -34,4 +34,60 @@ Ex:
   //而用assertArrayEquals()
   org.junit.Assert.assertArrayEquals(expected, input);
 ```
+## selection-sort
+介绍选择排序
 
+一共三步
+1. find the smallest one
+2. move it to the front
+3. select the rest (maybe recursion?)
+
+### findSmallest   
+```java
+public static String findSmallest(String[] s) {
+    //...
+}
+//记得吗？先写测试
+ /** 测试findSmallest*/
+ public static void testFindSmallest() {
+        String[] input = {"i", "have", "an", "egg"};
+        String expected = "an";
+
+        String actual = Sort.findSmallest(input);
+
+        org.junit.Assert.assertEquals(expected, actual);        
+}
+/** Returns the smallest string in x. */
+public static String findSmallest(String[] x) {
+    String smallest = x[0];
+    for (int i = 0; i < x.length; i += 1) {
+        //比较两个字符串的大小用a.compareTo(b), 返回一个int;
+        int cmp = x[i].compareTo(smallest); 
+        if (cmp < 0) {
+            smallest = x[i];
+        }
+    }
+    return smallest;
+}
+```
+### Swap
+```java
+public class TestSort {
+    /** test the swap method. */
+    pubilc static void testSwap() {
+        String[] input = {"an", "have", "i", "egg"};
+        int a = 0;
+        int b = 2;
+        String[] expected = {"i", "have", "an", "egg"};
+        Sort.swap(input, a, b);
+        org.junit.Assert.assertArrayEquals(expected, input);
+    }
+    public static void main(String[] args) {
+    testSwap();
+    }
+}
+```
+实现比较简单在此略过
+
+## Sort
+    
