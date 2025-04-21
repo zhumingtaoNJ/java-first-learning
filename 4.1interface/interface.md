@@ -13,7 +13,7 @@ List61B 被称为接口,即interface，如下：
 /** 一个有List相关属性和对象操作的接口*/
 public interface List61B<Item> {
     public void addFirst(Item x);
-    public void add Last(Item y);
+    public void addLast(Item y);
     public Item getFirst();
     public Item getLast();
     public Item removeLast();
